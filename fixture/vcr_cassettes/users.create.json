@@ -1,0 +1,32 @@
+[
+  {
+    "request": {
+      "body": "{\"email\":\"eric@clockk.com\",\"name\":\"Eric Froese\",\"user_id\":\"b0dbfb1d-fcab-4a27-9193-82b2c55e0675\"}",
+      "headers": {
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYmIyZjc3NGJiODg5N2I2YTFhZDRhZThhYjUyNGFiOWZhY2RhZjA0YjUyM2Y5YzA5NTQ5OGU3MmJmMzc0OWJjOTIzYmE0MmNmNmY1Njk1ZjAiLCJpYXQiOjE1ODg4NzYzODgsIm5iZiI6MTU4ODg3NjM4OCwiZXhwIjoyMjIwMDI4Mzg4LCJzdWIiOiI1NiIsInNjb3BlcyI6W119.b9-8D8mhY7heQXnsEaIMVM4RsK7otVgh6_609DrQcBH_LywgS0EgppganzDFJPvl_5F33TvdBX0XBzaLQ8WsP9TEIMQ027j6NY3-3oEu6TfdN9CT0J0t3i2E9-5Jo8g5IL0WyeP8DR8CsYC4vzfpUR2hSfnvCn681O6Lzr_-8-ElW0Sob3SayOVEUWLPTwW-dUYlnMJAiZ7SgvElqPuYjqosaA98V1s2_joPz1bZzVV7Q1S0WUSsUoJg3IRQnUOtzUQ5Xer4CvZ_3oTNRzYtq6VPnSZtlV6LGaRx2Cc-r58t2FDV---zo96pr6Zp3NfqXiXCZ_wKGhcIp5VW6YykIi_os3nNt6LuqQg_e033uFHeuX_UhuAtIj_1RgppNe7GtJrt3TjhwMc_7_m2mU_niaqafU6LP588cnWWqAwYOTrFb779BBAeAnhS9fVdMXKGbxpF89Igfi3wLoBLBp8upTKVzqXXsLC6lYWtFAydovgzqcFf3kJ6gIpSkScpzV-NlRcOnUQQoZKiQnpiiP8YOa4np4dnd85gktYjScltXEoc6eAIx9MroevxUOywA_svjpxMahMSNxmEDjdA_PVGnyHyMtVybIFK6Qwy2JK3IeJXyWkqJJzSndXCETiOXkB_KTJCykOxp95F5PaZLGqtrVsUEt0kuzCeKLxBF0Zmp94",
+        "Content-Type": "application/json"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.getstories.io/v1/users"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"id\":\"f3111ed7-9372-453e-8838-19ab2de8adc0\",\"user_id\":\"b0dbfb1d-fcab-4a27-9193-82b2c55e0675\",\"is_full\":true,\"created_at\":\"2020-05-07 21:14:40\",\"updated_at\":\"2020-05-07 21:14:40\",\"name\":\"Eric Froese\",\"email\":\"eric@clockk.com\",\"phone\":null,\"tags\":[],\"attributes\":[]}",
+      "headers": {
+        "Cache-Control": "no-cache, private",
+        "Content-Type": "application/json",
+        "Date": "Thu, 07 May 2020 21:16:17 GMT",
+        "Server": "Apache",
+        "Vary": "Authorization",
+        "X-RateLimit-Limit": "300",
+        "X-RateLimit-Remaining": "286",
+        "Content-Length": "265",
+        "Connection": "keep-alive"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
