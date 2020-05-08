@@ -239,10 +239,9 @@ defmodule Stories.Resource do
           """
           def update(id, changes, options \\ []) do
             url = "#{api_url(options)}/#{resource_path()}/#{id}"
-            access_token = Keyword.get(options, :access_token)
 
             body =
-              case Jason.encode(Map.put(%{}, resource(), changes)) do
+              case Jason.encode(changes) do
                 {:ok, body} ->
                   body
 
@@ -253,8 +252,12 @@ defmodule Stories.Resource do
                   )
               end
 
-            case HTTPoison.put(url, body, [{"Content-Type", "application/json"}]) do
-              {:ok, %HTTPoison.Response{body: resource}} ->
+            case HTTPoison.post(
+                   url,
+                   body,
+                   Stories.Resource.get_auth_headers() ++ [{"Content-Type", "application/json"}]
+                 ) do
+              {:ok, resp = %HTTPoison.Response{body: resource}} ->
                 resource = Jason.decode!(resource, keys: :atoms)
 
                 struct!(__MODULE__, resource)
@@ -282,9 +285,8 @@ defmodule Stories.Resource do
           """
           def delete(id, options \\ []) do
             url = "#{api_url(options)}/#{resource_path()}/#{id}"
-            access_token = Keyword.get(options, :access_token)
 
-            case HTTPoison.delete(url) do
+            case HTTPoison.delete(url, Stories.Resource.get_auth_headers()) do
               {:ok, resp} ->
                 case resp.status_code do
                   204 ->

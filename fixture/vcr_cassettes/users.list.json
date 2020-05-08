@@ -1,0 +1,31 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Authorization": "Bearer your.token"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.getstories.io/v1/users?page=1&per_page=50"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"data\":[{\"id\":\"f3111ed7-9372-453e-8838-19ab2de8adc0\",\"user_id\":\"b0dbfb1d-fcab-4a27-9193-82b2c55e0675\",\"is_full\":true,\"created_at\":\"2020-05-07 21:14:40\",\"updated_at\":\"2020-05-07 21:14:40\",\"name\":\"Eric Froese\",\"email\":\"eric@clockk.com\",\"phone\":null,\"tags\":[],\"attributes\":[]}],\"links\":{\"first\":\"https:\\/\\/api.getstories.io\\/v1\\/users?page=1\",\"last\":\"https:\\/\\/api.getstories.io\\/v1\\/users?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"path\":\"https:\\/\\/api.getstories.io\\/v1\\/users\",\"per_page\":50,\"to\":1,\"total\":1}}",
+      "headers": {
+        "Cache-Control": "no-cache, private",
+        "Content-Type": "application/json",
+        "Date": "Fri, 08 May 2020 14:11:33 GMT",
+        "Server": "Apache",
+        "Vary": "Authorization",
+        "X-RateLimit-Limit": "300",
+        "X-RateLimit-Remaining": "299",
+        "Content-Length": "549",
+        "Connection": "keep-alive"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
