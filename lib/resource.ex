@@ -62,7 +62,7 @@ defmodule Stories.Resource do
           @doc """
           Retrieve #{__MODULE__} by id. Accepts a keyword list of options.
 
-          returns %#{__MODULE__}{}
+          returns `%#{__MODULE__}{}`
 
           ## Options
           * `:id` - The id of the resource you are trying to retrieve. Defaults to empty, giving same behaviour as list/1
@@ -158,7 +158,7 @@ defmodule Stories.Resource do
           @doc """
           Retrieve list of #{__MODULE__} Stories resource. Shares all options with get/1
 
-          returns [%#{__MODULE__}{}]
+          returns `[%#{__MODULE__}{}]`
 
           ## Options
           * `:page` - The page number to use in pagination. Default 1
@@ -185,7 +185,7 @@ defmodule Stories.Resource do
           @doc """
           Create new #{__MODULE__} resource. Parameters are not validated, but passed along in the request body. Please see Stories API documentation for the appropriate body parameters for your resource.
 
-          returns %#{__MODULE__}{}
+          returns `%#{__MODULE__}{}`
 
           ## Params
           * `properties` - Map of resource properties to create the resource with. This will be different for each resource based on the specification in Stories API
@@ -231,7 +231,7 @@ defmodule Stories.Resource do
           @doc """
           Update given #{__MODULE__} resource. Parameters are not validated, but passed along in the request body. Please see Stories API documentation for the appropriate body parameters for your resource.
 
-          returns %#{__MODULE__}{}
+          returns `%#{__MODULE__}{}`
 
           ## Params
           * `id` - id of `#{__MODULE__}` resource being updated.

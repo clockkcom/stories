@@ -28,12 +28,14 @@ config :stories,
 ## Basic Usage
 
 Get list of users:
+
 ```
   iex> users = Stories.User.list()
   iex> [%Stories.User{}] = users
 ```
 
 Create an event:
+
 ```
   iex> event = Stories.Event.create(%{
   ...>    user_id: "f3111ed7-9372-453e-8838-19ab2de8adc0",
@@ -41,21 +43,3 @@ Create an event:
   ...>  })
   iex> %Stories.Event{} = event
 ```
-
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `stories` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:stories, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/stories](https://hexdocs.pm/stories).
-

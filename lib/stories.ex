@@ -31,15 +31,15 @@ defmodule Stories do
 
   Get list of users:
 
-    iex> users = Stories.User.list()
-    iex> [%Stories.User{}] = users
+      iex> users = Stories.User.list()
+      iex> [%Stories.User{}] = users
 
   Create an event:
 
-    iex> event = Stories.Event.create(%{
-    ...>    user_id: "f3111ed7-9372-453e-8838-19ab2de8adc0",
-    ...>    name: "A developer tested the Elixir Stories API wrapper"
-    ...>  })
-    iex> %Stories.Event{} = event
+      iex> event = Stories.Event.create(%{
+      ...>    user_id: "f3111ed7-9372-453e-8838-19ab2de8adc0",
+      ...>    name: "A developer tested the Elixir Stories API wrapper"
+      ...>  })
+      iex> %Stories.Event{} = event
   """
 end

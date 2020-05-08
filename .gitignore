@@ -23,3 +23,5 @@ erl_crash.dump
 stories-*.tar
 
 /config/test.exs
+
+.DS_Store
