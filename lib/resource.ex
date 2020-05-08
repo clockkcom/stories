@@ -4,7 +4,7 @@ defmodule Stories.Resource do
 
   ## Example Config
       config :stories,
-        api_key:
+        api_key: "your api key"
 
   The authorization headers can be customized for each request using the following options provided as a keyword list in each resource function:
 
@@ -26,7 +26,7 @@ defmodule Stories.Resource do
     api_url =
       unless Keyword.get(opts, :api_url_override) do
         quote do
-          def api_url(options \\ []) do
+          defp api_url(options \\ []) do
             "https://api.getstories.io/v1"
           end
         end
@@ -35,7 +35,7 @@ defmodule Stories.Resource do
     pagination_data =
       unless Keyword.get(opts, :pagination_data_override) do
         quote do
-          def pagination_data(resource), do: resource
+          defp pagination_data(resource), do: resource
         end
       end
 
@@ -43,7 +43,7 @@ defmodule Stories.Resource do
       unless Keyword.get(opts, :resource_path_override) do
         quote do
           # Default to simply return the resource name as the resource path
-          def resource_path() do
+          defp resource_path() do
             resource()
           end
         end
