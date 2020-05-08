@@ -2,6 +2,8 @@
 
 An Elixir API wrapper for the Stories API (https://www.getstories.io/)
 
+Read docs https://hexdocs.pm/stories
+
 Stories gathers everything that happens regarding a user on a timeline,
 so you can understand what is going on and take action in the right direction.
 

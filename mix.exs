@@ -14,7 +14,6 @@ defmodule Stories.MixProject do
       package: [
         maintainers: ["Eric Froese", "Clockk.com Inc."],
         licenses: ["Apache-2.0"],
-        organization: "Clockk.com Inc.",
         links: %{
           "GitHub" => "https://github.com/clockkcom/stories",
           "Clockk.com" => "https://clockk.com"
