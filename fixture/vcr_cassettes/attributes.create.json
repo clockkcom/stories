@@ -1,0 +1,32 @@
+[
+  {
+    "request": {
+      "body": "{\"data_type\":\"boolean\",\"name\":\"Admin\"}",
+      "headers": {
+        "Authorization": "Bearer your.token",
+        "Content-Type": "application/json"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.getstories.io/v1/attributes"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"id\":122,\"name\":\"Admin\",\"slug\":\"admin\",\"data_type\":\"boolean\"}",
+      "headers": {
+        "Cache-Control": "no-cache, private",
+        "Content-Type": "application/json",
+        "Date": "Fri, 08 May 2020 15:07:48 GMT",
+        "Server": "Apache",
+        "Vary": "Authorization",
+        "X-RateLimit-Limit": "300",
+        "X-RateLimit-Remaining": "289",
+        "Content-Length": "62",
+        "Connection": "keep-alive"
+      },
+      "status_code": 201,
+      "type": "ok"
+    }
+  }
+]
