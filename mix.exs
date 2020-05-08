@@ -9,6 +9,18 @@ defmodule Stories.MixProject do
       start_permanent: Mix.env() == :prod,
       deps: deps(),
 
+      # Hex
+      description: "An Elixir wrapper for the Stories API, by Clockk.com Inc.",
+      package: [
+        maintainers: ["Eric Froese", "Clockk.com Inc."],
+        licenses: ["Apache-2.0"],
+        organization: "Clockk.com Inc.",
+        links: %{
+          "GitHub" => "https://github.com/clockkcom/stories",
+          "Clockk.com" => "https://clockk.com"
+        }
+      ],
+
       # Docs
       name: "Stories",
       source_url: "https://github.com/clockkcom/stories",
