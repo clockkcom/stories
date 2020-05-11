@@ -3,7 +3,7 @@
     "request": {
       "body": "",
       "headers": {
-        "Authorization": "Bearer your.token"
+        "Authorization": "Bearer your-token"
       },
       "method": "get",
       "options": [],
@@ -12,16 +12,16 @@
     },
     "response": {
       "binary": false,
-      "body": "{\"data\":[{\"id\":\"f3111ed7-9372-453e-8838-19ab2de8adc0\",\"user_id\":\"b0dbfb1d-fcab-4a27-9193-82b2c55e0675\",\"is_full\":true,\"created_at\":\"2020-05-07 21:14:40\",\"updated_at\":\"2020-05-07 21:14:40\",\"name\":\"Eric Froese\",\"email\":\"eric@clockk.com\",\"phone\":null,\"tags\":[],\"attributes\":[]}],\"links\":{\"first\":\"https:\\/\\/api.getstories.io\\/v1\\/users?page=1\",\"last\":\"https:\\/\\/api.getstories.io\\/v1\\/users?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"path\":\"https:\\/\\/api.getstories.io\\/v1\\/users\",\"per_page\":50,\"to\":1,\"total\":1}}",
+      "body": "{\"data\":[{\"id\":\"a4c53ae1-57df-41f9-98f6-e36652d3c893\",\"user_id\":\"ac4bb089-40f2-41d1-a21b-b45551103608\",\"is_full\":true,\"created_at\":\"2020-05-11 15:50:22\",\"updated_at\":\"2020-05-11 15:50:22\",\"name\":\"Amber Guitar from Tours\",\"tags\":[],\"attributes\":[]},{\"id\":\"c100b5c8-048f-41ab-b9dd-09aa889906c0\",\"user_id\":\"f15caa36-0ac1-433f-80ec-8e765fe9ebe6\",\"is_full\":true,\"created_at\":\"2020-05-08 18:52:27\",\"updated_at\":\"2020-05-08 18:52:27\",\"name\":\"Test customer - eric Froese\",\"email\":\"eric+3@clockk.com\",\"phone\":null,\"tags\":[],\"attributes\":[]},{\"id\":\"e95a8550-c323-44f5-8426-d12f8dd55238\",\"user_id\":\"f3111ed7-9372-453e-8838-19ab2de8adc0\",\"is_full\":true,\"created_at\":\"2020-05-08 16:05:49\",\"updated_at\":\"2020-05-11 17:06:37\",\"name\":\"A developer tested the Elixir Stories API wrapper\",\"email\":null,\"phone\":null,\"tags\":[],\"attributes\":[]}],\"links\":{\"first\":\"https:\\/\\/api.getstories.io\\/v1\\/users?page=1\",\"last\":\"https:\\/\\/api.getstories.io\\/v1\\/users?page=2\",\"prev\":null,\"next\":\"https:\\/\\/api.getstories.io\\/v1\\/users?page=2\"},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":2,\"path\":\"https:\\/\\/api.getstories.io\\/v1\\/users\",\"per_page\":50,\"to\":50,\"total\":85}}",
       "headers": {
         "Cache-Control": "no-cache, private",
         "Content-Type": "application/json",
-        "Date": "Fri, 08 May 2020 14:11:33 GMT",
+        "Date": "Mon, 11 May 2020 17:24:29 GMT",
         "Server": "Apache",
         "Vary": "Authorization",
         "X-RateLimit-Limit": "300",
         "X-RateLimit-Remaining": "299",
-        "Content-Length": "549",
+        "transfer-encoding": "chunked",
         "Connection": "keep-alive"
       },
       "status_code": 200,

@@ -1,0 +1,31 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Authorization": "Bearer your-token"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.getstories.io/v1/tags?page=1&per_page=50"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"data\":[{\"id\":15,\"name\":\"Test tag\",\"slug\":\"test_tag\"}],\"links\":{\"first\":\"https:\\/\\/api.getstories.io\\/v1\\/tags?page=1\",\"last\":\"https:\\/\\/api.getstories.io\\/v1\\/tags?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"path\":\"https:\\/\\/api.getstories.io\\/v1\\/tags\",\"per_page\":50,\"to\":1,\"total\":1}}",
+      "headers": {
+        "Cache-Control": "no-cache, private",
+        "Content-Type": "application/json",
+        "Date": "Mon, 11 May 2020 17:40:40 GMT",
+        "Server": "Apache",
+        "Vary": "Authorization",
+        "X-RateLimit-Limit": "300",
+        "X-RateLimit-Remaining": "299",
+        "Content-Length": "326",
+        "Connection": "keep-alive"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

@@ -14,7 +14,7 @@ defmodule UserTest do
 
   test "list users" do
     use_cassette "users.list" do
-      assert [%Stories.User{}] = Stories.User.list()
+      assert [%Stories.User{} | _] = Stories.User.list()
     end
   end
 

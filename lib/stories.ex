@@ -32,7 +32,7 @@ defmodule Stories do
   Get list of users:
 
       iex> users = Stories.User.list()
-      iex> [%Stories.User{}] = users
+      iex> [%Stories.User{} | _] = users
 
   Create an event:
 

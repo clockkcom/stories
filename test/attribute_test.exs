@@ -14,7 +14,7 @@ defmodule AttributeTest do
 
   test "list attributes" do
     use_cassette "attributes.list" do
-      assert [%Stories.Attribute{}] = Stories.Attribute.list()
+      assert [%Stories.Attribute{} | _] = Stories.Attribute.list()
     end
   end
 

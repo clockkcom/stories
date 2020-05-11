@@ -1,0 +1,32 @@
+[
+  {
+    "request": {
+      "body": "{\"name\":\"Test tag\"}",
+      "headers": {
+        "Authorization": "Bearer your-token",
+        "Content-Type": "application/json"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.getstories.io/v1/tags"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"id\":14,\"name\":\"Test tag\",\"slug\":\"test_tag\"}",
+      "headers": {
+        "Cache-Control": "no-cache, private",
+        "Content-Type": "application/json",
+        "Date": "Mon, 11 May 2020 15:18:00 GMT",
+        "Server": "Apache",
+        "Vary": "Authorization",
+        "X-RateLimit-Limit": "300",
+        "X-RateLimit-Remaining": "299",
+        "Content-Length": "45",
+        "Connection": "keep-alive"
+      },
+      "status_code": 201,
+      "type": "ok"
+    }
+  }
+]
