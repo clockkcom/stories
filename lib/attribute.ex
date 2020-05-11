@@ -8,5 +8,5 @@ defmodule Stories.Attribute do
     :data_type
   ]
 
-  def resource, do: "attributes"
+  defp resource, do: "attributes"
 end

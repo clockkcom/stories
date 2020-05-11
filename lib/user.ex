@@ -14,5 +14,5 @@ defmodule Stories.User do
     tags: []
   ]
 
-  def resource, do: "users"
+  defp resource, do: "users"
 end

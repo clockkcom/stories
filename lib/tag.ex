@@ -7,7 +7,7 @@ defmodule Stories.Tag do
     :slug
   ]
 
-  def resource, do: "tags"
+  defp resource, do: "tags"
 
   @doc """
   This lets you assign (and/or remove) a tag to multiple users at once. If the tag does not already exist, it will be created for you.

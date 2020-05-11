@@ -17,5 +17,5 @@ defmodule Stories.Event do
     :user_id
   ]
 
-  def resource, do: "events"
+  defp resource, do: "events"
 end
