@@ -48,20 +48,19 @@ defmodule TagTest do
     end
   end
 
-  # TODO: restore this test when it stops returning 301
-  # test "assign tag to user returns tag" do
-  #   # use_cassette "tags.assign" do
-  #   assert %Stories.Tag{} =
-  #            Stories.Tag.assign_remove(%Stories.Tag{slug: "test_tag"}, %{
-  #              assign: [
-  #                %{
-  #                  id: "c100b5c8-048f-41ab-b9dd-09aa889906c0"
-  #                }
-  #              ]
-  #            })
+  test "assign tag to user returns tag" do
+    use_cassette "tags.assign" do
+    assert %Stories.Tag{} =
+             Stories.Tag.assign_remove(%Stories.Tag{slug: "test_tag"}, %{
+               assign: [
+                 %{
+                   id: "c100b5c8-048f-41ab-b9dd-09aa889906c0"
+                 }
+               ]
+             })
 
-  #   # end
-  # end
+    end
+  end
 
   test "assign tag by id to user returns tag" do
     use_cassette "tags.assign.by_id" do

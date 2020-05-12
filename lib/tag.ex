@@ -52,12 +52,12 @@ defmodule Stories.Tag do
 
     if remove_valid? && assign_valid? do
       url =
-        "#{api_url()}/#{resource_path()}/"
+        "#{api_url()}/#{resource_path()}"
         |> (fn url ->
               if is_nil(tag.id) do
                 url
               else
-                "#{url}#{tag.id}"
+                "#{url}/#{tag.id}"
               end
             end).()
 
