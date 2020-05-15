@@ -97,22 +97,26 @@ defmodule Stories.Resource do
                 nil
 
               {:ok, response = %HTTPoison.Response{status_code: 200, body: resp_body}} ->
-                resource = Jason.decode!(resp_body, keys: :atoms)
+                case Jason.decode(resp_body, keys: :atoms) do
+                  {:ok, resource} ->
+                    if Map.has_key?(pagination_data(resource), :links) do
+                      # This means the resource is a list of the resource, in an attribute named after the resource
+                      resource_key = :data
 
-                if Map.has_key?(pagination_data(resource), :links) do
-                  # This means the resource is a list of the resource, in an attribute named after the resource
-                  resource_key = :data
+                      if Application.get_env(:stories, :env, :prod) == :test do
+                        # lets learn about new keys that stories adds to their data objects without crashing in prod
+                        resource[resource_key]
+                        |> Enum.map(&struct!(__MODULE__, &1))
+                      else
+                        resource[resource_key]
+                        |> Enum.map(&struct(__MODULE__, &1))
+                      end
+                    else
+                      struct!(__MODULE__, resource)
+                    end
 
-                  if Application.get_env(:stories, :env, :prod) == :test do
-                    # lets learn about new keys that stories adds to their data objects without crashing in prod
-                    resource[resource_key]
-                    |> Enum.map(&struct!(__MODULE__, &1))
-                  else
-                    resource[resource_key]
-                    |> Enum.map(&struct(__MODULE__, &1))
-                  end
-                else
-                  struct!(__MODULE__, resource)
+                  {:error, %Jason.DecodeError{data: data, position: 0, token: nil}} ->
+                    raise(StoriesError, "Error: Jason could not decode response #{data}")
                 end
 
               {:error, %HTTPoison.Error{reason: reason}} ->
@@ -211,9 +215,13 @@ defmodule Stories.Resource do
                    Stories.Resource.get_auth_headers() ++ [{"Content-Type", "application/json"}]
                  ) do
               {:ok, %HTTPoison.Response{body: resp_body}} ->
-                resource = Jason.decode!(resp_body, keys: :atoms)
+                case Jason.decode(resp_body, keys: :atoms) do
+                  {:ok, resource} ->
+                    struct!(__MODULE__, resource)
 
-                struct!(__MODULE__, resource)
+                  {:error, %Jason.DecodeError{data: data, position: 0, token: nil}} ->
+                    raise(StoriesError, "Error: Jason could not decode response #{data}")
+                end
 
               {:error, %HTTPoison.Response{status_code: 422, body: body}} ->
                 {:error, Jason.decode!(body)}
@@ -257,10 +265,14 @@ defmodule Stories.Resource do
                    body,
                    Stories.Resource.get_auth_headers() ++ [{"Content-Type", "application/json"}]
                  ) do
-              {:ok, resp = %HTTPoison.Response{body: resource}} ->
-                resource = Jason.decode!(resource, keys: :atoms)
+              {:ok, %HTTPoison.Response{body: resp_body}} ->
+                case Jason.decode(resp_body, keys: :atoms) do
+                  {:ok, resource} ->
+                    struct!(__MODULE__, resource)
 
-                struct!(__MODULE__, resource)
+                  {:error, %Jason.DecodeError{data: data, position: 0, token: nil}} ->
+                    raise(StoriesError, "Error: Jason could not decode response #{data}")
+                end
 
               {:error, %HTTPoison.Response{status_code: 422, body: body}} ->
                 {:error, Jason.decode!(body)}
