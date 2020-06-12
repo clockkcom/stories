@@ -1,9 +1,9 @@
 [
   {
     "request": {
-      "body": "{\"data\":\"{\\\"clockk_info\\\":\\\"This is some data related to clockk\\\",\\\"format\\\":\\\"JSON is the format of this data. The API calls for a string. I wonder how it handles this data when it displays it in the interface\\\"}\",\"name\":\"A developer tested the Elixir Stories API wrapper\",\"user_id\":\"f3111ed7-9372-453e-8838-19ab2de8adc0\"}",
+      "body": "{\"data\":{\"clockk_info\":\"This is some data related to clockk\",\"format\":\"JSON is the format of this data. The API calls for a string. I wonder how it handles this data when it displays it in the interface\"},\"name\":\"A developer tested the Elixir Stories API wrapper\",\"user_id\":\"f3111ed7-9372-453e-8838-19ab2de8adc0\"}",
       "headers": {
-        "Authorization": "Bearer your.token",
+        "Authorization": "Bearer your-token",
         "Content-Type": "application/json"
       },
       "method": "post",
@@ -13,16 +13,16 @@
     },
     "response": {
       "binary": false,
-      "body": "{\"id\":28667541,\"created_at\":\"2020-05-08 16:06:28\",\"is_full\":true,\"records\":1,\"is_grouped\":false,\"data\":\"{\\\"clockk_info\\\":\\\"This is some data related to clockk\\\",\\\"format\\\":\\\"JSON is the format of this data. The API calls for a string. I wonder how it handles this data when it displays it in the interface\\\"}\",\"next_event_id\":\"\",\"event_name\":\"a_developer_tested_the_elixir_stories_api_wrapper\",\"name\":\"A developer tested the Elixir Stories API wrapper\",\"created_at_locale\":\"2020-05-08 12:06:28\",\"extra\":{\"name\":\"A developer tested the Elixir Stories API wrapper\",\"slug\":\"a_developer_tested_the_elixir_stories_api_wrapper\",\"is_provider\":false,\"icon\":\"\",\"color\":\"84919a\",\"description\":\"\",\"photo_url\":\"https:\\/\\/stories-storage.s3.us-east-2.amazonaws.com\\/profiles\\/q32uvGisePiSQBUzYfGWnGWgNEIdge2YEMxpFNGB.png\"},\"user\":\"e95a8550-c323-44f5-8426-d12f8dd55238\",\"user_id\":\"f3111ed7-9372-453e-8838-19ab2de8adc0\"}",
+      "body": "{\"id\":34020483,\"created_at\":\"2020-06-12 14:05:13\",\"provider_id\":null,\"flag_id\":13,\"event_name\":\"a_developer_tested_the_elixir_stories_api_wrapper\",\"name\":\"A developer tested the Elixir Stories API wrapper\",\"user\":\"e95a8550-c323-44f5-8426-d12f8dd55238\",\"user_id\":\"f3111ed7-9372-453e-8838-19ab2de8adc0\",\"data\":{\"clockk_info\":\"This is some data related to clockk\",\"format\":\"JSON is the format of this data. The API calls for a string. I wonder how it handles this data when it displays it in the interface\"}}",
       "headers": {
         "Cache-Control": "no-cache, private",
         "Content-Type": "application/json",
-        "Date": "Fri, 08 May 2020 16:06:28 GMT",
+        "Date": "Fri, 12 Jun 2020 14:05:12 GMT",
         "Server": "Apache",
         "Vary": "Authorization",
         "X-RateLimit-Limit": "300",
-        "X-RateLimit-Remaining": "286",
-        "Content-Length": "905",
+        "X-RateLimit-Remaining": "298",
+        "Content-Length": "505",
         "Connection": "keep-alive"
       },
       "status_code": 201,

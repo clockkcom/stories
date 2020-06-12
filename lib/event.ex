@@ -12,6 +12,8 @@ defmodule Stories.Event do
     :is_grouped,
     :name,
     :next_event_id,
+    :flag_id,
+    :provider_id,
     :records,
     :user,
     :user_id

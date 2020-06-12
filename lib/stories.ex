@@ -38,7 +38,8 @@ defmodule Stories do
 
       iex> event = Stories.Event.create(%{
       ...>    user_id: "f3111ed7-9372-453e-8838-19ab2de8adc0",
-      ...>    name: "A developer tested the Elixir Stories API wrapper"
+      ...>    name: "A developer tested the Elixir Stories API wrapper",
+      ...>    data: %{}
       ...>  })
       iex> %Stories.Event{} = event
   """

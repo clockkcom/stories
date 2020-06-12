@@ -12,12 +12,11 @@ defmodule EventTest do
                Stories.Event.create(%{
                  user_id: "f3111ed7-9372-453e-8838-19ab2de8adc0",
                  name: "A developer tested the Elixir Stories API wrapper",
-                 data:
-                   Jason.encode!(%{
-                     clockk_info: "This is some data related to clockk",
-                     format:
-                       "JSON is the format of this data. The API calls for a string. I wonder how it handles this data when it displays it in the interface"
-                   })
+                 data: %{
+                   clockk_info: "This is some data related to clockk",
+                   format:
+                     "JSON is the format of this data. The API calls for a string. I wonder how it handles this data when it displays it in the interface"
+                 }
                })
     end
   end

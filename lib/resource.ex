@@ -217,7 +217,11 @@ defmodule Stories.Resource do
               {:ok, %HTTPoison.Response{body: resp_body}} ->
                 case Jason.decode(resp_body, keys: :atoms) do
                   {:ok, resource} ->
-                    struct!(__MODULE__, resource)
+                    if Application.get_env(:stories, :env, :prod) == :test do
+                      struct!(__MODULE__, resource)
+                    else
+                      struct(__MODULE__, resource)
+                    end
 
                   {:error, %Jason.DecodeError{data: data, position: 0, token: nil}} ->
                     raise(StoriesError, "Error: Jason could not decode response #{data}")
