@@ -312,8 +312,13 @@ defmodule Stories.Resource do
                     {:error, 404}
 
                   status_code when status_code > 399 ->
-                    error = Jason.decode!(resp.body, keys: :atoms)
-                    raise(StoriesError, error)
+                    case Jason.decode(resp.body, keys: :atoms) do
+                      {:ok, error} ->
+                        raise(StoriesError, error)
+
+                      {:error, %Jason.DecodeError{data: data, position: 0, token: nil}} ->
+                        raise(StoriesError, "Error: Jason could not decode response #{data}")
+                    end
                 end
 
               {:error, %HTTPoison.Response{status_code: 422, body: body}} ->
