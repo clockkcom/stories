@@ -13,7 +13,7 @@ defmodule Stories.MixProject do
       description: "An Elixir wrapper for the Stories API, by Clockk.com Inc.",
       package: [
         maintainers: ["Eric Froese", "Clockk.com Inc."],
-        licenses: ["Apache-2.0"],
+        licenses: ["closed"],
         links: %{
           "GitHub" => "https://github.com/clockkcom/stories",
           "Clockk.com" => "https://clockk.com"
